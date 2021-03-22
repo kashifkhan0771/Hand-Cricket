@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style_sheets/bootstrap.css">
+    <link rel="stylesheet" href="style_sheets/game_custom_style.css">
+  </head>
+  <body>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-header">
+          Play Game
+        </div>
+        <div class="card-body">
+          <form name="game_input" action="" method="post">
+            <div class="form-group">
+            <label for="user_shot">Choose Your Shot</label>
+            <select class="form-control" id="user_shot" name="user_shot">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <input type="button" name="" value="Play" onclick="play()" class="btn btn-outline-danger btn-block">
+          <input type="button" name="" value="Reset Game" onclick="refresh()" class="btn btn-outline-warning btn-block">
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          Statistics
+        </div>
+        <div class="card-body">
+          <form name="stats" action="" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="total_score">Total Score</label>
+                <input type="text" class="form-control" value="0" name="total_score" id="total_score" readonly>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="rem_balls">Balls Remaning</label>
+                <input type="text" class="form-control" value="36" name="rem_balls" id="rem_balls" readonly>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="output">Output</label>
+                <input type="text" class="form-control" id="output" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-header">
+          <h5>You Played</h5>
+        </div>
+        <div class="card">
+          <h2 id="your_shot"></h2>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h5>Computer Played</h5>
+        </div>
+        <div class="card">
+          <h2 id="computer_shot"></h2>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
